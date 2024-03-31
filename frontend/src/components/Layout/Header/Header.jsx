@@ -21,15 +21,13 @@ const LinkButton = ({ url = '/', title = 'Home', onClose }) => (
 );
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const isAuthenticated=true;
+  const isAuthenticated = true;
 
-  const user={
-    role:"admin"
-  }
+  const user = {
+    role: 'admin',
+  };
 
-  const logoutHandler=()=>{
-
-  }
+  const logoutHandler = () => {};
 
   return (
     <>
@@ -69,12 +67,12 @@ const Header = () => {
               <LinkButton onClose={onClose} url="/contact" title="Contact Us" />
               <LinkButton onClose={onClose} url="/about" title="About" />
               <HStack
-               justifyContent={'space-evenly'}
-               position="absolute"
-               bottom={'2rem'}
-               width="80%"
+                justifyContent={'space-evenly'}
+                position="absolute"
+                bottom={'2rem'}
+                width="80%"
               >
-                 {isAuthenticated ? (
+                {isAuthenticated ? (
                   <>
                     <VStack>
                       <HStack>
@@ -96,8 +94,6 @@ const Header = () => {
                           </Button>
                         </Link>
                       )}
-
-                     
                     </VStack>
                   </>
                 ) : (
@@ -113,7 +109,6 @@ const Header = () => {
                     </Link>
                   </>
                 )}
-
               </HStack>
             </VStack>
           </DrawerBody>
